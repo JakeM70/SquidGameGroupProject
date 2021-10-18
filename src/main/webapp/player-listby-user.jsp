@@ -14,7 +14,7 @@
 <tr>
 <td><input type="radio" name="id" value="${currentlist.id}"></td>
 <td><h2>${currentlist.listName}</h2></td></tr>
-<tr><td colspan="3">Death Date: ${currentlist.tripDate}</td></tr>
+<tr><td colspan="3">Death Date: ${currentlist.deathDate}</td></tr>
 <tr><td colspan="3">Game:
 ${currentlist.game.gameName}</td></tr>
 <c:forEach var = "listVal" items = "${currentlist.listOfPlayers}">

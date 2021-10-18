@@ -25,7 +25,7 @@ public class ListDetails {
 	@GeneratedValue
 	private int id;
 	private String listName;
-	private LocalDate tripDate;
+	private LocalDate deathDate;
 	@ManyToOne (cascade=CascadeType.PERSIST)
 	private Game game;
 	@OneToMany(cascade=CascadeType.MERGE, fetch=FetchType.EAGER)
@@ -36,30 +36,30 @@ public class ListDetails {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public ListDetails(int id, String listName, LocalDate tripDate, Game game, List<Player> listOfPlayers) 
+	public ListDetails(int id, String listName, LocalDate deathDate, Game game, List<Player> listOfPlayers) 
 	{
 		super();
 		this.id = id;
 		this.listName = listName;
-		this.tripDate = tripDate;
+		this.deathDate = deathDate;
 		this.game = game;
 		this.listOfPlayers = listOfPlayers;
 	}
 	
-	public ListDetails(String listName, LocalDate tripDate, Game game, List<Player> listOfPlayers) 
+	public ListDetails(String listName, LocalDate deathDate, Game game, List<Player> listOfPlayers) 
 	{
 		super();
 		this.listName = listName;
-		this.tripDate = tripDate;
+		this.deathDate = deathDate;
 		this.game = game;
 		this.listOfPlayers = listOfPlayers;
 	}
 	
-	public ListDetails(String listName, LocalDate tripDate, Game game) 
+	public ListDetails(String listName, LocalDate deathDate, Game game) 
 	{
 		super();
 		this.listName = listName;
-		this.tripDate = tripDate;
+		this.deathDate = deathDate;
 		this.game = game;
 	}
 	
@@ -83,14 +83,14 @@ public class ListDetails {
 		this.listName = listName;
 	}
 	
-	public LocalDate getTripDate() 
+	public LocalDate getDeathDate() 
 	{
-		return tripDate;
+		return deathDate;
 	}
 	
-	public void setTripDate(LocalDate tripDate) 
+	public void setDeathDate(LocalDate deathDate) 
 	{
-		this.tripDate = tripDate;
+		this.deathDate = deathDate;
 	}
 	
 	public Game getGame()
@@ -115,6 +115,6 @@ public class ListDetails {
 	
 	@Override
 	public String toString() {
-		return "ListDetails [id=" + id + ", listName=" + listName + ", tripDate=" + tripDate + ", game=" + game + ", listOfPlayers=" + listOfPlayers + "]";
+		return "ListDetails [id=" + id + ", listName=" + listName + ", deathDate=" + deathDate + ", game=" + game + ", listOfPlayers=" + listOfPlayers + "]";
 	}
 }

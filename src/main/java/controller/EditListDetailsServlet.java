@@ -53,7 +53,7 @@ public class EditListDetailsServlet extends HttpServlet {
 		String day = request.getParameter("day");
 		String year = request.getParameter("year");
 		String gameName = request.getParameter("gameName");
-		//find or add the new game
+		//find or add the new game	
 		Game newGame = gh.findGame(gameName);
 		LocalDate ld;
 		try {
@@ -78,7 +78,7 @@ public class EditListDetailsServlet extends HttpServlet {
 			listToUpdate.setListOfPlayers(selectedPlayersInList);
 			}
 			listToUpdate.setListName(newListName);
-			listToUpdate.setTripDate(ld);
+			listToUpdate.setDeathDate(ld);
 			listToUpdate.setGame(newGame);
 			dao.updateList(listToUpdate);
 			getServletContext().getRequestDispatcher("/viewAllListsServlet").forward(request, response);

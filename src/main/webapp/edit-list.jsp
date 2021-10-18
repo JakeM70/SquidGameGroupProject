@@ -11,7 +11,7 @@ pageEncoding="UTF-8"%>
 <form action = "editListDetailsServlet" method="post">
 <input type ="hidden" name = "id" value= "${listToEdit.id}">
 List Name: <input type ="text" name = "listName" value="${listToEdit.listName}"><br />
-Trip date: <input type ="text" name = "month" placeholder="mm" size="4" value= "${month}"> <input type ="text" name = "day" placeholder="dd" size="4" value= "${date}">, <input type ="text" name= "year" placeholder="yyyy" size="4" value= "${year}">
+Death date: <input type ="text" name = "month" placeholder="mm" size="4" value= "${month}"> <input type ="text" name = "day" placeholder="dd" size="4" value= "${date}">, <input type ="text" name= "year" placeholder="yyyy" size="4" value= "${year}">
 Game Name: <input type = "text" name = "gameName" value=
 "${listToEdit.game.gameName}"><br />
 Current Players:<br />

@@ -60,9 +60,9 @@ public class ListNavigationServlet extends HttpServlet {
 					Integer tempId = Integer.parseInt(request.getParameter("id"));
 					ListDetails listToEdit = dao.searchForListDetailsById(tempId);
 					request.setAttribute("listToEdit", listToEdit);
-					request.setAttribute("month", listToEdit.getTripDate().getMonthValue());
-					request.setAttribute("date", listToEdit.getTripDate().getDayOfMonth());
-					request.setAttribute("year", listToEdit.getTripDate().getYear());
+					request.setAttribute("month", listToEdit.getDeathDate().getMonthValue());
+					request.setAttribute("date", listToEdit.getDeathDate().getDayOfMonth());
+					request.setAttribute("year", listToEdit.getDeathDate().getYear());
 					ListPlayerHelper daoForPlayers = new ListPlayerHelper();
 					
 					request.setAttribute("allPlayers", daoForPlayers.showAllPlayers());
